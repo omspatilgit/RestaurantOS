@@ -5,6 +5,37 @@
 
 ---
 
+## 📸 Project Walkthrough & Screenshots
+
+### 1. Customer Ordering Portal
+The customer experience starts with a rich digital menu accessed via table QR code. It features an **AI Dish Sommelier** for personalized recommendations and live availability badges.
+<br>
+![Customer Menu](https://placehold.co/800x400/1e1e1e/white?text=Customer+Menu+Screenshot)
+
+### 2. Live Order Tracker & Feedback
+After placing an order, customers see a real-time animated tracker. Once served, they can instantly leave feedback using the post-meal widget.
+<br>
+![Live Tracker](https://placehold.co/800x400/1e1e1e/white?text=Live+Tracker+Screenshot)
+
+### 3. Owner Dashboard & Analytics
+A centralized glassmorphic dashboard for restaurant owners, featuring real-time KPI analytics, hourly revenue charts, and live order volumes.
+<br>
+![Owner Dashboard](https://placehold.co/800x400/1e1e1e/white?text=Owner+Dashboard+Screenshot)
+
+### 4. Real-Time Orders Kanban
+An interactive drag-and-drop pipeline where staff manage orders. As orders move from *Pending* to *Kitchen* to *Served*, the customer's tracker updates instantly via Supabase Realtime.
+<br>
+![Orders Kanban](https://placehold.co/800x400/1e1e1e/white?text=Orders+Kanban+Screenshot)
+
+### 5. Kitchen Display Screen (KDS)
+A dedicated, high-contrast, full-screen display for the kitchen staff to easily read incoming tickets, complete with timestamps and special notes.
+<br>
+![Kitchen Display Screen](https://placehold.co/800x400/1e1e1e/white?text=Kitchen+Display+Screenshot)
+
+*(To update these screenshots, simply upload your images to your GitHub repo and replace the placeholder URLs in this README!)*
+
+---
+
 ## 🏆 Hackathon Level & Criteria Coverage
 
 | Hackathon Level | User Stories | Status | Features Implemented |
@@ -103,4 +134,3 @@ npm run dev
 ---
 
 *Built for VibeAthon 6.0 by Om Patil*
-
