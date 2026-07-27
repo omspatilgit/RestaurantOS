@@ -21,8 +21,8 @@
 
 - **Team Name**: Tendercodex
 - **Event**: VibeAthon 6.0 Hackathon (25th - 27th July 2026)
-- **Hosted Application Link**: [Insert Vercel/Netlify Link Here]
-- **Backend API Link**: [Insert Render Link Here]
+- **Hosted Application Link for owner**: https://restaurantos-web-one.vercel.app/login
+- **Hosted Application Link for customers**: https://restaurantos-web-one.vercel.app/portal
 
 ---
 
