@@ -36,3 +36,11 @@ venv/
 *.njsproj
 *.sln
 *.sw?
+
+# Hackathon Docs to Ignore
+*_instructions*.md
+PRESENTATION.md
+PROJECT_OVERVIEW.md
+DEPLOYMENT.md
+REQUIREMENTS.md
+status.txt
