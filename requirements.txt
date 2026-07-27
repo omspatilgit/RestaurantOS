@@ -1,0 +1,19 @@
+# Frontend Dependencies (React/Vite)
+react
+react-dom
+vite
+tailwindcss
+framer-motion
+lucide-react
+recharts
+@supabase/supabase-js
+@emailjs/browser
+@hello-pangea/dnd
+react-router-dom
+
+# Backend Dependencies (Node/Express)
+express
+@google/genai
+@supabase/supabase-js
+cors
+dotenv

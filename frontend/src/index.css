@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors (Neon Lime & Emerald Glow) ── */
+  --color-brand-50: #fbffeb;
+  --color-brand-100: #f5ffd6;
+  --color-brand-200: #e8ffad;
+  --color-brand-300: #daff85;
+  --color-brand-400: #ccff00;
+  --color-brand-500: #a3cc00;
+  --color-brand-600: #7a9900;
+  --color-brand-700: #526600;
+  --color-brand-800: #293300;
+  --color-brand-900: #141a00;
+
+  /* ── Neon Accent ── */
+  --color-neon-lime: #ccff00;
+  --color-neon-emerald: #10b981;
+  --color-neon-orange: #ff6b35;
+  --color-neon-red: #ff4757;
+  --color-neon-blue: #58a6ff;
+
+  /* ── Obsidian Surface ── */
+  --color-surface-950: #000000;
+  --color-surface-900: #0c0c0c;
+  --color-surface-800: #161616;
+  --color-surface-700: #262626;
+  --color-surface-600: #404040;
+  --color-surface-500: #737373;
+  --color-surface-400: #a3a3a3;
+  --color-surface-300: #d4d4d4;
+  --color-surface-200: #e5e5e5;
+  --color-surface-100: #f5f5f5;
+  --color-surface-50: #fafafa;
+
+  /* ── Typography ── */
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ── Border Radius ── */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-surface-950);
+    color: var(--color-surface-100);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-900);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-600);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-surface-500);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glow-lime {
+    box-shadow: 0 0 30px rgba(204, 255, 0, 0.3), 0 0 80px rgba(204, 255, 0, 0.1);
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #ccff00, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow {
+    border: 1px solid rgba(204, 255, 0, 0.3);
+    box-shadow: inset 0 0 20px rgba(204, 255, 0, 0.05);
+  }
+
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+  }
+
+  .grid-bg {
+    background-size: 60px 60px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    letter-spacing: -0.06em;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .badge-live {
+    position: relative;
+  }
+
+  .badge-live::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--color-surface-800) 25%,
+      var(--color-surface-700) 50%,
+      var(--color-surface-800) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .gradient-bg {
+    background: radial-gradient(ellipse at top left, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(88, 166, 255, 0.06) 0%, transparent 50%),
+                var(--color-surface-950);
+  }
+}
