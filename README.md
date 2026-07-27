@@ -13,12 +13,12 @@
 #### 1. Customer Ordering Portal
 The customer experience starts with a rich digital menu accessed via table QR code. It features an **AI Dish Sommelier** for personalized recommendations and live availability badges.
 <br>
-![Customer Menu](https://placehold.co/800x400/1e1e1e/white?text=Customer+Menu+Screenshot)
+<img width="1920" height="1080" alt="Screenshot 2026-07-28 004957" src="https://github.com/user-attachments/assets/b13a85c5-bc46-4ba4-9876-8591cad89ca0" />
 
 #### 2. Live Order Tracker & Feedback
 After placing an order, customers see a real-time animated tracker. Once served, they can instantly leave feedback using the post-meal widget.
 <br>
-![Live Tracker](https://placehold.co/800x400/1e1e1e/white?text=Live+Tracker+Screenshot)
+<img width="1920" height="1080" alt="Screenshot 2026-07-28 005228" src="https://github.com/user-attachments/assets/ba9741df-b97e-49de-aa9d-d2079f71385a" />
 
 ---
 
@@ -28,19 +28,20 @@ After placing an order, customers see a real-time animated tracker. Once served,
 #### 3. Owner Dashboard & Analytics
 A centralized glassmorphic dashboard for restaurant owners, featuring real-time KPI analytics, hourly revenue charts, and live order volumes.
 <br>
-![Owner Dashboard](https://placehold.co/800x400/1e1e1e/white?text=Owner+Dashboard+Screenshot)
+<img width="1920" height="1080" alt="Screenshot 2026-07-28 005452" src="https://github.com/user-attachments/assets/47d6143c-c1f0-4503-b62b-ffdbc6e944dd" />
+
 
 #### 4. Real-Time Orders Kanban
 An interactive drag-and-drop pipeline where staff manage orders. As orders move from *Pending* to *Kitchen* to *Served*, the customer's tracker updates instantly via Supabase Realtime.
 <br>
-![Orders Kanban](https://placehold.co/800x400/1e1e1e/white?text=Orders+Kanban+Screenshot)
+<img width="1920" height="1080" alt="Screenshot 2026-07-28 005432" src="https://github.com/user-attachments/assets/fab7823c-383c-4a72-83f0-9507f5852a81" />
+
 
 #### 5. Kitchen Display Screen (KDS)
 A dedicated, high-contrast, full-screen display for the kitchen staff to easily read incoming tickets, complete with timestamps and special notes.
 <br>
-![Kitchen Display Screen](https://placehold.co/800x400/1e1e1e/white?text=Kitchen+Display+Screenshot)
+<img width="1920" height="1080" alt="Screenshot 2026-07-28 005522" src="https://github.com/user-attachments/assets/461ce8c0-e02f-432e-9025-6a3a82bf8224" />
 
-*(To update these screenshots, simply upload your images to your GitHub repo and replace the placeholder URLs in this README!)*
 
 ---
 
