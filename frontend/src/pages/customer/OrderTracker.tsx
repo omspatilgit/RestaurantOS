@@ -35,7 +35,7 @@ function getStepIndex(status: OrderStatus) {
   return idx >= 0 ? idx : 0;
 }
 
-function LiveDot({ connected }: { connected: boolean }) {
+function LiveDot() {
   return (
     <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
       <Wifi className="w-3 h-3 text-green-400" />
@@ -170,7 +170,7 @@ export default function OrderTracker() {
   const [order, setOrder] = useState<OrderData | null>(null);
   const [status, setStatus] = useState<OrderStatus>('pending');
   const [loading, setLoading] = useState(true);
-  const [realtimeConnected] = useState(true);
+
   const [justUpdated, setJustUpdated] = useState(false);
   const [checkingOut, setCheckingOut] = useState(false);
 
@@ -342,7 +342,7 @@ export default function OrderTracker() {
           <h1 className="text-sm font-bold text-white">Live Order Tracker</h1>
           <p className="text-xs text-brand-400/80">Table #{tableNo} · {customerName}</p>
         </div>
-        <LiveDot connected={realtimeConnected} />
+        <LiveDot />
       </div>
 
       {loading ? (

@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Minus, Plus, X, Clock, ChefHat, CheckCircle,
-  Loader2, Search, ShoppingBag, ArrowLeft, Leaf, Sparkles, Brain, Zap, Star
+  Loader2, Search, ShoppingBag, ArrowLeft, Leaf, Sparkles, Star
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 

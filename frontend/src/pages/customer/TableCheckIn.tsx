@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChefHat, User, ArrowRight, Sparkles, Star, Clock, Wifi, Hash } from 'lucide-react';
+import { ChefHat, User, ArrowRight, Sparkles, Clock, Hash } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 const API = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';

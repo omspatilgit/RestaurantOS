@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { MessageSquare, X, Send, Bot } from 'lucide-react';
 const API = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 interface Message {

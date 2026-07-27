@@ -207,11 +207,11 @@ export default function OrdersKanban() {
       if (json?.data && Array.isArray(json.data)) {
         const sanitized = json.data.map(sanitizeOrder);
         setOrders(prev => {
-          const existingIds = new Set(prev.map(o => o.id));
-          const brandNew = sanitized.filter(o => !existingIds.has(o.id));
+          const existingIds = new Set(prev.map((o: Order) => o.id));
+          const brandNew = sanitized.filter((o: Order) => !existingIds.has(o.id));
           if (brandNew.length > 0 && prev.length > 0) {
             setTimeout(() => {
-              brandNew.forEach(o => {
+              brandNew.forEach((o: Order) => {
                 toastRealtimeRef.current(
                   `🔔 New Order — Table ${o.table_number}`,
                   `${o.customer_name ? o.customer_name + ' · ' : ''}${o.items.length} items · ₹${o.total_amount}`

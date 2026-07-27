@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChefHat, Clock, CheckCircle2, RefreshCw,
-  Flame, IndianRupee, Volume2, VolumeX
+  Flame
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 

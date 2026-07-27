@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LayoutGrid, Plus, MoreVertical, Wifi, Coffee, Users, Trash2, CalendarDays } from 'lucide-react';
+import { LayoutGrid, Plus, Wifi, Coffee, Users, Trash2, CalendarDays } from 'lucide-react';
 import type { RestaurantTable, TableStatus } from '../../hooks/useRealtimeTables';
 import { useRealtimeTables } from '../../hooks/useRealtimeTables';
 import { cn } from '../../lib/utils';

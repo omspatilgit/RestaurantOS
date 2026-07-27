@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback, useSearchParams } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ShoppingCart, Minus, Plus, X, Flame,
@@ -278,6 +279,14 @@ export default function MenuPage() {
   const [searchParams] = useSearchParams();
   const tableNo = Number(searchParams.get('table') || 1);
 
+  const [menu, setMenu] = useState<MenuItem[]>(MOCK_MENU);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState('');
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [orderSuccess, setOrderSuccess] = useState(false);
+
   useEffect(() => {
     fetch(`${API}/api/menu`)
       .then(r => r.json())
@@ -412,7 +421,7 @@ export default function MenuPage() {
         {/* Menu grid */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <AnimatePresence mode="popLayout">
-            {filtered.map(item => (
+            {filtered.map((item: MenuItem) => (
               <MenuCard
                 key={item.id}
                 item={item}
@@ -455,7 +464,7 @@ export default function MenuPage() {
         cart={cart}
         open={cartOpen}
         onClose={() => setCartOpen(false)}
-        onAdd={id => { const item = menu.find(m => m.id === id); if (item) addToCart(item); }}
+        onAdd={id => { const item = menu.find((m: MenuItem) => m.id === id); if (item) addToCart(item); }}
         onRemove={removeFromCart}
         onCheckout={handleCheckout}
         tableNo={tableNo}
