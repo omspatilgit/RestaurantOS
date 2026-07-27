@@ -202,7 +202,7 @@ export default function OrdersKanban() {
 
   const fetchOrders = useCallback(async () => {
     try {
-      const res = await fetch(`${API}/api/orders`);
+      const res = await fetch(`${API}/api/orders?_t=${Date.now()}`, { cache: 'no-store' });
       const json = await res.json();
       if (json?.data && Array.isArray(json.data)) {
         const sanitized = json.data.map(sanitizeOrder);

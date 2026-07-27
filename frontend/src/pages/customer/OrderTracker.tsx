@@ -178,7 +178,7 @@ export default function OrderTracker() {
 
   const fetchOrder = useCallback(async () => {
     try {
-      const res = await fetch(`${API}/api/orders`);
+      const res = await fetch(`${API}/api/orders?_t=${Date.now()}`, { cache: 'no-store' });
       const json = await res.json();
       const data = json?.data;
       if (Array.isArray(data)) {
