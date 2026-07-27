@@ -1,4 +1,4 @@
-# 🍽️ RestaurantOS v2
+# 🍽️ RestaurantOS 
 
 > **VibeAthon 6.0 Hackathon Project (2K26) — Platinum Level & Bonus Architecture**  
 > *A full-stack, real-time SaaS platform built to solve core operational challenges in modern restaurants.*
